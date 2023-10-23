@@ -63,17 +63,14 @@ class MidProjectApplicationTests {
 		Reservation reservation2 = new Reservation();
 		Reservation reservation3 = new Reservation();
 
-//		reservation1.setReservationId(1);
 		reservation1.setMovie(movie1);
 		reservation1.setRegisterUser(registerUser1);
 		reservation1.setReservationDate(LocalDate.now());
 
-//		reservation2.setReservationId(2);
 		reservation2.setMovie(movie2);
 		reservation2.setRegisterUser(registerUser2);
 		reservation2.setReservationDate(LocalDate.now());
 
-//		reservation3.setReservationId(3);
 		reservation3.setMovie(movie3);
 		reservation3.setRegisterUser(registerUser3);
 		reservation3.setReservationDate(LocalDate.now());
