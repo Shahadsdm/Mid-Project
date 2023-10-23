@@ -17,17 +17,11 @@ import java.util.List;
  * Using lombok annotations
  */
 @Data
-
+@NoArgsConstructor
 public class RegisterUser extends User {
 
-    @OneToMany(mappedBy = "registerUserId")
-    private List<Reservation> reservations;
 
-    public RegisterUser() {
-    }
-
-    public RegisterUser(int userId, String name, String email, String password, String role, List<Reservation> reservations) {
+    public RegisterUser(int userId, String name, String email, String password) {
         super(userId, name, email, password, "RegisterUser");
-        this.reservations = reservations;
     }
 }

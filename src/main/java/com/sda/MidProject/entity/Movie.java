@@ -14,7 +14,6 @@ import java.util.List;
 public class Movie {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int movieId;
 
     private String title;
@@ -23,12 +22,15 @@ public class Movie {
 
     private double rating;
 
+    @Enumerated(EnumType.STRING)
     private MovieCategory category;
 
-    @OneToMany(mappedBy = "movie")
-    private List<Reservation> reservedMovies;
+//    @OneToMany(mappedBy = "movie")
+//    private List<Reservation> reservedMovies;
 
     @ManyToOne
     @JoinColumn(name = "admin_id")
     private Admin admin;
+
+
 }

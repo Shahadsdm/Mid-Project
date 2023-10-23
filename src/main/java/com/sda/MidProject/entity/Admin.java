@@ -17,15 +17,11 @@ import java.util.List;
  * Using lombok annotations
  */
 @Data
+@NoArgsConstructor
 public class Admin extends User{
 
-    @OneToMany(mappedBy = "admin")
-    private List<Movie> managedMovies;
-
-    public Admin() {
-    }
-    public Admin(int userId, String name, String email, String password, String role, List<Movie> managedMovies) {
+    public Admin(int userId, String name, String email, String password) {
         super(userId, name, email, password, "Admin");
-        this.managedMovies = managedMovies;
     }
+
 }
