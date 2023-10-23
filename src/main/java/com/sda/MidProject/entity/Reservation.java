@@ -23,8 +23,7 @@ public class Reservation {
 
     @ManyToOne
     @JoinColumn(name = "registerUser_id")
-    private RegisterUser registerUser;
+    private User registerUser;
 
     private LocalDate reservationDate;
-
 }

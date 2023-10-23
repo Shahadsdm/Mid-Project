@@ -25,9 +25,6 @@ public class Movie {
     @Enumerated(EnumType.STRING)
     private MovieCategory category;
 
-//    @OneToMany(mappedBy = "movie")
-//    private List<Reservation> reservedMovies;
-
     @ManyToOne
     @JoinColumn(name = "admin_id")
     private Admin admin;

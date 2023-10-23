@@ -34,9 +34,9 @@ class MidProjectApplicationTests {
 
 		// can i put the user class as an abstract class ?
 
-		Admin admin = new Admin(1, "Admin1", "admin1@example.com", "password1");
-		Admin admin2 = new Admin(2, "Admin2", "admin2@example.com", "password2");
-		Admin admin3 = new Admin(3, "Admin3", "admin3@example.com", "password3");
+		Admin admin = new Admin(1, "Admin1", "admin1@example.com");
+		Admin admin2 = new Admin(2, "Admin2", "admin2@example.com");
+		Admin admin3 = new Admin(3, "Admin3", "admin3@example.com");
 
 		adminRepository.save(admin);
 		adminRepository.save(admin2);
@@ -51,9 +51,9 @@ class MidProjectApplicationTests {
 		movieRepository.save(movie2);
 		movieRepository.save(movie3);
 
-		RegisterUser registerUser1 = new RegisterUser(1, "User1", "user1@example.com", "userPassword1");
-		RegisterUser registerUser2 = new RegisterUser(2, "User2", "user2@example.com", "userPassword2");
-		RegisterUser registerUser3 = new RegisterUser(3, "User3", "user3@example.com", "userPassword3");
+		RegisterUser registerUser1 = new RegisterUser(4, "User1", "user1@example.com");
+		RegisterUser registerUser2 = new RegisterUser(5, "User2", "user2@example.com");
+		RegisterUser registerUser3 = new RegisterUser(6, "User3", "user3@example.com");
 
 		registerUserRepository.save(registerUser1);
 		registerUserRepository.save(registerUser2);
@@ -63,14 +63,17 @@ class MidProjectApplicationTests {
 		Reservation reservation2 = new Reservation();
 		Reservation reservation3 = new Reservation();
 
+//		reservation1.setReservationId(1);
 		reservation1.setMovie(movie1);
 		reservation1.setRegisterUser(registerUser1);
 		reservation1.setReservationDate(LocalDate.now());
 
+//		reservation2.setReservationId(2);
 		reservation2.setMovie(movie2);
 		reservation2.setRegisterUser(registerUser2);
 		reservation2.setReservationDate(LocalDate.now());
 
+//		reservation3.setReservationId(3);
 		reservation3.setMovie(movie3);
 		reservation3.setRegisterUser(registerUser3);
 		reservation3.setReservationDate(LocalDate.now());

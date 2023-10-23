@@ -20,8 +20,8 @@ import java.util.List;
 @NoArgsConstructor
 public class Admin extends User{
 
-    public Admin(int userId, String name, String email, String password) {
-        super(userId, name, email, password, "Admin");
+    public Admin(int userId, String name, String email) {
+        super(userId, name, email, "Admin");
     }
 
 }
