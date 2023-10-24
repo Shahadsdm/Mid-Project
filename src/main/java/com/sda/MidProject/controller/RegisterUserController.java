@@ -22,7 +22,7 @@ public class RegisterUserController {
     }
 
     @GetMapping("/RegisterUser/{registerUserId}")
-    public RegisterUser findByRegisterUserId(@PathVariable int registerUserId){
+    public RegisterUser findByRegisterUserId(@PathVariable int registerUserId) throws Exception {
         return registerUserServiceImpl.findByRegisterUserId(registerUserId);
     }
 

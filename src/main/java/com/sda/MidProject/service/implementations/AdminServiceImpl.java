@@ -28,13 +28,12 @@ public class AdminServiceImpl implements AdminServiceInterface {
         }    }
 
     @Override
-    public Admin findByAdminId(int adminId) {
+    public Admin findByAdminId(int adminId) throws Exception {
         Optional<Admin> adminOptional = adminRepository.findById(adminId);
         if (adminOptional.isPresent()) {
             return adminOptional.get();
         } else {
-            System.out.println("Admin not found");
-            return null;
+            throw new Exception("Admin not found");
         }
     }
 

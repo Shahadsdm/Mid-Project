@@ -21,7 +21,7 @@ public class AdminController {
     }
 
     @GetMapping("/Admin/{adminId}")
-    public Admin findByAdminId(@PathVariable int adminId){
+    public Admin findByAdminId(@PathVariable int adminId) throws Exception {
         return adminServiceImpl.findByAdminId(adminId);
     }
 

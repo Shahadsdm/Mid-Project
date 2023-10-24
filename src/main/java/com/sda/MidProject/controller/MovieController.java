@@ -24,7 +24,7 @@ public class MovieController {
     }
 
     @GetMapping("/MovieCategory/{movieCategory}")
-    public List<Movie> findByMovieCategory(@PathVariable String movieCategory){
+    public List<Movie> findByMovieCategory(@PathVariable String movieCategory) throws Exception {
         MovieCategory Category = MovieCategory.valueOf(movieCategory.toUpperCase());
         return movieServiceImpl.findByMovieCategory(Category);
     }

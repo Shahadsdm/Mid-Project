@@ -10,7 +10,7 @@ public interface MovieServiceInterface {
 
     List<Movie> getAllMovies();
 
-    List<Movie> findByMovieCategory(MovieCategory movieCategory);
+    List<Movie> findByMovieCategory(MovieCategory movieCategory) throws Exception;
 
     String updateMovieInfo(int movieId, Movie movie, Admin admin);
 

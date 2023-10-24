@@ -11,7 +11,7 @@ public interface RegisterUserServiceInterface {
 
     RegisterUser addRegisterUser(RegisterUser registerUser) throws Exception;
 
-    RegisterUser findByRegisterUserId(int registerUserId);
+    RegisterUser findByRegisterUserId(int registerUserId) throws Exception;
 
     String deleteRegisterUser(int registerUserId);
 

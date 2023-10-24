@@ -10,7 +10,7 @@ public interface AdminServiceInterface {
 
     Admin addAdmin(Admin admin) throws Exception;
 
-    Admin findByAdminId(int adminId);
+    Admin findByAdminId(int adminId) throws Exception;
 
     String deleteAdmin(int adminId);
 }

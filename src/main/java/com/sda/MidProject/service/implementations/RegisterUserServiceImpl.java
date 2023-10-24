@@ -30,13 +30,12 @@ public class RegisterUserServiceImpl implements RegisterUserServiceInterface {
     }
 
     @Override
-    public RegisterUser findByRegisterUserId(int registerUserId) {
+    public RegisterUser findByRegisterUserId(int registerUserId) throws Exception {
         Optional<RegisterUser> registerUserOptional = registerUserRepository.findById(registerUserId);
         if (registerUserOptional.isPresent()) {
             return registerUserOptional.get();
         } else {
-            System.out.println("RegisterUser not found");
-            return null;
+            throw new Exception("RegisterUser not found");
         }
     }
 

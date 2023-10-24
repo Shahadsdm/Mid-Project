@@ -1,11 +1,9 @@
 package com.sda.MidProject.controller;
 
-import com.sda.MidProject.entity.RegisterUser;
-import com.sda.MidProject.entity.Reservation;
+import com.sda.MidProject.entity.*;
 import com.sda.MidProject.service.implementations.ReservationServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,4 +17,16 @@ public class ReservationController {
     public List<Reservation> Reservations(){
         return reservationServiceImpl.getAllReservations();
     }
+
+    @GetMapping("/Reservation/{reservationId}")
+    public Reservation findByReservationId(@PathVariable int reservationId) throws Exception {
+        return reservationServiceImpl.findByReservationId(reservationId);
+    }
+
+//    @PostMapping("/addReservation/")
+//    public Reservation addReservation(@RequestBody Reservation reservation)throws Exception{
+//        Movie movie = reservation.getMovie();
+//        RegisterUser registerUser = (RegisterUser) reservation.getRegisterUser();
+//        return reservationServiceImpl.addReservation(reservation, movie, registerUser);
+//    }
 }

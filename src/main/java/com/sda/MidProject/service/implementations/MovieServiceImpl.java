@@ -27,7 +27,10 @@ public class MovieServiceImpl implements MovieServiceInterface {
     }
 
     @Override
-    public List<Movie> findByMovieCategory(MovieCategory movieCategory) {
+    public List<Movie> findByMovieCategory(MovieCategory movieCategory) throws Exception {
+        if (movieCategory == null) {
+            throw new Exception("Invalid Movie Category provided.");
+        }
         return movieRepository.findByCategory(movieCategory);
     }
 
