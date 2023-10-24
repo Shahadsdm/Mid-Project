@@ -57,7 +57,7 @@ public class RegisterUserServiceImpl implements RegisterUserServiceInterface {
             registerUser.setName(registerUser.getName());
             registerUser.setEmail(registerUser.getEmail());
             registerUserRepository.save(registerUser);
-            return "RegisterUser updated";
+            return "RegisterUser updated Successfully";
         } else {
             return "RegisterUser not found";
         }

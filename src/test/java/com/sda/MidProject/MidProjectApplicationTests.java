@@ -32,8 +32,6 @@ class MidProjectApplicationTests {
 	@Test
 	void setUp(){
 
-		// can i put the user class as an abstract class ?
-
 		Admin admin = new Admin(1, "Admin1", "admin1@example.com");
 		Admin admin2 = new Admin(2, "Admin2", "admin2@example.com");
 		Admin admin3 = new Admin(3, "Admin3", "admin3@example.com");
@@ -43,17 +41,17 @@ class MidProjectApplicationTests {
 		adminRepository.save(admin3);
 
 
-		Movie movie1 = new Movie(1, "Movie1", 120.0, 8.0, MovieCategory.Action, admin);
-		Movie movie2 = new Movie(2, "Movie2", 110.0, 7.5, MovieCategory.Comedy, admin);
-		Movie movie3 =new Movie(3, "Movie3", 140.0, 8.5, MovieCategory.Horror, admin2);
+		Movie movie1 = new Movie(1, "Movie1", 120.0, 8.0, MovieCategory.ACTION, admin);
+		Movie movie2 = new Movie(2, "Movie2", 110.0, 7.5, MovieCategory.COMEDY, admin);
+		Movie movie3 =new Movie(3, "Movie3", 140.0, 8.5, MovieCategory.HORROR, admin2);
 
 		movieRepository.save(movie1);
 		movieRepository.save(movie2);
 		movieRepository.save(movie3);
 
-		RegisterUser registerUser1 = new RegisterUser(4, "User1", "user1@example.com");
-		RegisterUser registerUser2 = new RegisterUser(5, "User2", "user2@example.com");
-		RegisterUser registerUser3 = new RegisterUser(6, "User3", "user3@example.com");
+		RegisterUser registerUser1 = new RegisterUser(4, "User4", "user4@example.com");
+		RegisterUser registerUser2 = new RegisterUser(5, "User5", "user5@example.com");
+		RegisterUser registerUser3 = new RegisterUser(6, "User6", "user6@example.com");
 
 		registerUserRepository.save(registerUser1);
 		registerUserRepository.save(registerUser2);
@@ -78,6 +76,11 @@ class MidProjectApplicationTests {
 		reservationRepository.save(reservation1);
 		reservationRepository.save(reservation2);
 		reservationRepository.save(reservation3);
+	}
+
+	@Test
+	void clear(){
+		reservationRepository.deleteAll();
 	}
 
 }
