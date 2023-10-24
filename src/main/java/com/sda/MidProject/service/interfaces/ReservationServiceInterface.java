@@ -13,5 +13,5 @@ public interface ReservationServiceInterface {
 
     Reservation findByReservationId(int reservationId) throws Exception;
 
-//    Reservation addReservation(Reservation reservation, Movie movie, RegisterUser registerUser) throws Exception;
+    Reservation addReservation(Reservation reservation, Movie movie, User registerUser) throws Exception;
 }

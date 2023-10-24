@@ -25,5 +25,5 @@ public class Reservation {
     @JoinColumn(name = "registerUser_id")
     private User registerUser;
 
-    private LocalDate reservationDate;
+    private LocalDate reservationDate = LocalDate.now();
 }

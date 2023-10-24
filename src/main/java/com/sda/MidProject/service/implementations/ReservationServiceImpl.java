@@ -37,17 +37,17 @@ public class ReservationServiceImpl implements ReservationServiceInterface {
         }
     }
 
-//    @Override
-//    public Reservation addReservation(Reservation reservation, Movie movie, RegisterUser registerUser) throws Exception {
-//        Movie foundMovie = movieRepository.findById(movie.getMovieId()).get();
-//        Movie movie1 = movieRepository.save(foundMovie);
-//        RegisterUser foundRegisterUser = registerUserRepository.findById(registerUser.getUserId()).get();
-//        RegisterUser user = registerUserRepository.save(foundRegisterUser);
-//        reservation.setMovie(movie1);
-//        reservation.setRegisterUser(user);
-//        if (reservationRepository.existsById(reservation.getReservationId())){
-//            throw new Exception("Reservation with ID " + reservation.getReservationId() + " already exists.");
-//        }
-//        return reservationRepository.save(reservation);
-//    }
+    @Override
+    public Reservation addReservation(Reservation reservation, Movie movie, User registerUser) throws Exception {
+        Movie foundMovie = movieRepository.findById(movie.getMovieId()).get();
+        Movie movie1 = movieRepository.save(foundMovie);
+        RegisterUser foundRegisterUser = registerUserRepository.findById(registerUser.getUserId()).get();
+        RegisterUser user = registerUserRepository.save(foundRegisterUser);
+        reservation.setMovie(movie1);
+        reservation.setRegisterUser(user);
+        if (reservationRepository.existsById(reservation.getReservationId())){
+            throw new Exception("Reservation with ID " + reservation.getReservationId() + " already exists.");
+        }
+        return reservationRepository.save(reservation);
+    }
 }

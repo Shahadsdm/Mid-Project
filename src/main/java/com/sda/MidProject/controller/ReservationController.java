@@ -23,10 +23,12 @@ public class ReservationController {
         return reservationServiceImpl.findByReservationId(reservationId);
     }
 
-//    @PostMapping("/addReservation/")
-//    public Reservation addReservation(@RequestBody Reservation reservation)throws Exception{
-//        Movie movie = reservation.getMovie();
-//        RegisterUser registerUser = (RegisterUser) reservation.getRegisterUser();
-//        return reservationServiceImpl.addReservation(reservation, movie, registerUser);
-//    }
+    @PostMapping("/addReservation")
+    public Reservation addReservation(@RequestBody Reservation reservation)throws Exception{
+        Movie movie = reservation.getMovie();
+        User registerUser =  reservation.getRegisterUser();
+        return reservationServiceImpl.addReservation(reservation, movie, registerUser);
+    }
+
+    //Delete reservation
 }
