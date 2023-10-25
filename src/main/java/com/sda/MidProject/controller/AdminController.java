@@ -2,6 +2,8 @@ package com.sda.MidProject.controller;
 
 import com.sda.MidProject.entity.Admin;
 import com.sda.MidProject.service.implementations.AdminServiceImpl;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,11 +11,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @RestController
 public class AdminController {
 
     @Autowired
     private AdminServiceImpl adminServiceImpl;
+
 
     @GetMapping("/Admins")
     public List<Admin> admins(){
