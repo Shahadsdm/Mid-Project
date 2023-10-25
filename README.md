@@ -6,13 +6,30 @@ The Movie Reservation System is a Java-based backend application that allows use
 The system comprises five main classes: User, Admin, RegisteredUser, Movie, and Reservation, each serving specific roles and functionalities.
 
 ## Table of Contents
-1. [Project Structure](#project-structure)
-2. [Class Descriptions](#class-descriptions)
-3. [Repository](#repository)
-4. [Controller](#controller)
-5. [Service](#service)
-6. [Usage](#usage)
-7. [UML Class Diagram](#uml-class-diagram)
+1. [UML Class Diagram](#uml-class-diagram)
+2. [Setup](#setup)
+3. [Technologies Used](technologies-used)
+4. [Project Structure](#project-structure)
+5. [Class Descriptions](#class-descriptions)
+6. [Repository](#repository)
+7. [Controller](#controller)
+8. [Service](#service)
+9. [Extra Links](extra-links)
+10. [Future Work](future-work)
+11. [Resources](#resources)
+
+## UML Class Diagram
+<img width="516" alt="image" src="https://github.com/Shahadsdm/Mid-Project/assets/128249461/a01a8ea8-1ce5-4acd-ad8b-754c5a9ffa31">
+
+
+## Setup
+- Clone the repository to your local environment.
+- Ensure you have Java and Spring Boot setup.
+- Configure your database connection properties in `src/main/resources/application.properties`.
+
+## Technologies Used
+- Java
+- Spring Boot
 
 ## Project Structure
 The project is structured into the following main components:
@@ -42,9 +59,14 @@ The project is structured into the following main components:
 ## Service
 - The `service` package contains the business logic for managing users, movies, and reservations. It interacts with repositories to process data.
 
-## Usage
-- Build and run the application.
-- Access the API endpoints to manage users, movies, and reservations.
+## Extra Links
+- [Trello](https://trello.com/invite/b/Rr0Ew7LK/ATTI69f994d172f868819ee44b3a60fbba0fE7967589/mid-project)
 
-## UML Class Diagram
-<img width="516" alt="image" src="https://github.com/Shahadsdm/Mid-Project/assets/128249461/a01a8ea8-1ce5-4acd-ad8b-754c5a9ffa31">
+## Future Work
+- Implementing user authentication and authorization.
+- Integrating payment processing.
+- Expanding the movie categorization system.
+
+## Resources
+- [Spring Boot Documentation](https://spring.io/projects/spring-boot)
+- [Ironhack Student Portal](http://my.ironhack.com)
