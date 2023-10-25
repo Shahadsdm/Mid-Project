@@ -12,6 +12,7 @@ The system comprises five main classes: User, Admin, RegisteredUser, Movie, and 
 4. [Controller](#controller)
 5. [Service](#service)
 6. [Usage](#usage)
+7. [UML Class Diagram](#uml-class-diagram)
 
 ## Project Structure
 The project is structured into the following main components:
