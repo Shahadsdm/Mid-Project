@@ -4,27 +4,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sda.MidProject.entity.Admin;
 import com.sda.MidProject.repository.AdminRepository;
 import com.sda.MidProject.service.implementations.AdminServiceImpl;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-
-import javax.print.attribute.standard.MediaName;
-import java.awt.*;
-import java.lang.runtime.*;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
@@ -84,7 +75,6 @@ class AdminControllerTest {
         Admin admin = new Admin(12,"Admin12","admin12@example.com");
         String requestBody = objectMapper.writeValueAsString(admin);
 
-        //MockMvc post request
         MvcResult mvcResult =
                 mockMvc.perform(post("/addAdmin")
                                 .content(requestBody)

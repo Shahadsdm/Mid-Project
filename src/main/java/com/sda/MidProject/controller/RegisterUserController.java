@@ -3,6 +3,8 @@ package com.sda.MidProject.controller;
 import com.sda.MidProject.entity.Admin;
 import com.sda.MidProject.entity.RegisterUser;
 import com.sda.MidProject.service.implementations.RegisterUserServiceImpl;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,11 +12,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @RestController
 public class RegisterUserController {
 
     @Autowired
     private RegisterUserServiceImpl registerUserServiceImpl;
+
 
     @GetMapping("/RegisterUsers")
     public List<RegisterUser> RegisterUsers(){
