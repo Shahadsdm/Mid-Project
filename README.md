@@ -61,6 +61,7 @@ The project is structured into the following main components:
 
 ## Extra Links
 - [Trello](https://trello.com/invite/b/Rr0Ew7LK/ATTI69f994d172f868819ee44b3a60fbba0fE7967589/mid-project)
+- [Presentation](https://drive.google.com/file/d/1AFrQGw2b1gq_QKLsFK4WL37E58Pevypo/view?usp=drivesdk)
 
 ## Future Work
 - Implementing user authentication and authorization.
