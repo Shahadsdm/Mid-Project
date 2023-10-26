@@ -21,7 +21,7 @@ import java.util.List;
 public class RegisterUser extends User {
 
 
-    public RegisterUser(int userId, String name, String email) {
-        super(userId, name, email, "RegisterUser");
+    public RegisterUser(int userId, String name, String email, String password) {
+        super(userId, name, email, password, "ROLE_USER");
     }
 }

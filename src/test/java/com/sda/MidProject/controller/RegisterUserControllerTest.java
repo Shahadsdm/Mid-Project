@@ -54,13 +54,13 @@ class RegisterUserControllerTest {
     @BeforeEach
     public void setup(){
         MockitoAnnotations.initMocks(this);
-        mockMvc = MockMvcBuilders.standaloneSetup(new RegisterUserController(registerUserServiceImpl)).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(new RegisterUserController()).build();
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
 
     @Test
     public void testUpdateRegisterUserSuccess() throws Exception {
-        RegisterUser updatedRegisterUser = new RegisterUser(5, "UpdatedUser", "updateduser@example.com");
+        RegisterUser updatedRegisterUser = new RegisterUser(5, "UpdatedUser", "updateduser@example.com","1234");
 
         when(registerUserServiceImpl.updateRegisterUser(5, updatedRegisterUser)).thenReturn("RegisterUser updated successfully");
 

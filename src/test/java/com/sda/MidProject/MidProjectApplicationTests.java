@@ -32,9 +32,9 @@ class MidProjectApplicationTests {
 	@Test
 	void setUp(){
 
-		Admin admin = new Admin(1, "Admin1", "admin1@example.com");
-		Admin admin2 = new Admin(2, "Admin2", "admin2@example.com");
-		Admin admin3 = new Admin(3, "Admin3", "admin3@example.com");
+		Admin admin = new Admin(1, "Admin1", "admin1@example.com","1234");
+		Admin admin2 = new Admin(2, "Admin2", "admin2@example.com","1234");
+		Admin admin3 = new Admin(3, "Admin3", "admin3@example.com","1234");
 
 		adminRepository.save(admin);
 		adminRepository.save(admin2);
@@ -49,9 +49,9 @@ class MidProjectApplicationTests {
 		movieRepository.save(movie2);
 		movieRepository.save(movie3);
 
-		RegisterUser registerUser1 = new RegisterUser(4, "User4", "user4@example.com");
-		RegisterUser registerUser2 = new RegisterUser(5, "User5", "user5@example.com");
-		RegisterUser registerUser3 = new RegisterUser(6, "User6", "user6@example.com");
+		RegisterUser registerUser1 = new RegisterUser(4, "User4", "user4@example.com","1234");
+		RegisterUser registerUser2 = new RegisterUser(5, "User5", "user5@example.com","1234");
+		RegisterUser registerUser3 = new RegisterUser(6, "User6", "user6@example.com","1234");
 
 		registerUserRepository.save(registerUser1);
 		registerUserRepository.save(registerUser2);

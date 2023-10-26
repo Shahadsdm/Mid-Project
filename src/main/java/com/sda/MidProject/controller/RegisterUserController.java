@@ -5,6 +5,7 @@ import com.sda.MidProject.entity.RegisterUser;
 import com.sda.MidProject.service.implementations.RegisterUserServiceImpl;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +13,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@NoArgsConstructor
-@AllArgsConstructor
+
 @RestController
+@RequestMapping("/api/v1/user")
+@RequiredArgsConstructor
 public class RegisterUserController {
 
     @Autowired

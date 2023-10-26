@@ -40,7 +40,7 @@ class AdminControllerTest {
     @BeforeEach
     public void setup(){
         MockitoAnnotations.initMocks(this);
-        mockMvc = MockMvcBuilders.standaloneSetup(new AdminController(adminServiceIml)).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(new AdminController()).build();
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
 
@@ -72,7 +72,7 @@ class AdminControllerTest {
 
     @Test
     void AddAdminTest() throws Exception {
-        Admin admin = new Admin(12,"Admin12","admin12@example.com");
+        Admin admin = new Admin(12,"Admin12","admin12@example.com","1234");
         String requestBody = objectMapper.writeValueAsString(admin);
 
         MvcResult mvcResult =

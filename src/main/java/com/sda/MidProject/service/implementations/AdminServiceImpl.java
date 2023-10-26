@@ -3,6 +3,7 @@ package com.sda.MidProject.service.implementations;
 import com.sda.MidProject.entity.Admin;
 import com.sda.MidProject.repository.AdminRepository;
 import com.sda.MidProject.service.interfaces.AdminServiceInterface;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Data
 public class AdminServiceImpl implements AdminServiceInterface {
 
     @Autowired
