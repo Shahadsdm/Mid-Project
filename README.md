@@ -8,14 +8,14 @@ The system comprises five main classes: User, Admin, RegisteredUser, Movie, and 
 ## Table of Contents
 1. [UML Class Diagram](#uml-class-diagram)
 2. [Setup](#setup)
-3. [Technologies Used](technologies-used)
+3. [Technologies Used](#technologies-used)
 4. [Project Structure](#project-structure)
 5. [Class Descriptions](#class-descriptions)
 6. [Repository](#repository)
 7. [Controller](#controller)
 8. [Service](#service)
-9. [Extra Links](extra-links)
-10. [Future Work](future-work)
+9. [Extra Links](#extra-links)
+10. [Future Work](#future-work)
 11. [Resources](#resources)
 
 ## UML Class Diagram
@@ -64,7 +64,6 @@ The project is structured into the following main components:
 - [Presentation](https://drive.google.com/file/d/1AFrQGw2b1gq_QKLsFK4WL37E58Pevypo/view?usp=drivesdk)
 
 ## Future Work
-- Implementing user authentication and authorization.
 - Integrating payment processing.
 - Expanding the movie categorization system.
 
