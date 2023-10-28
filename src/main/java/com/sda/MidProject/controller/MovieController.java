@@ -5,6 +5,9 @@ import com.sda.MidProject.entity.Movie;
 import com.sda.MidProject.entity.MovieCategory;
 import com.sda.MidProject.service.implementations.MovieServiceImpl;
 import com.sda.MidProject.service.interfaces.MovieServiceInterface;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,11 +15,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @RestController
 public class MovieController {
 
     @Autowired
     private MovieServiceImpl movieServiceImpl;
+
 
     @GetMapping("/Movies")
     public List<Movie> movies(){

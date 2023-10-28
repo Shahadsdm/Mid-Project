@@ -2,11 +2,15 @@ package com.sda.MidProject.controller;
 
 import com.sda.MidProject.entity.*;
 import com.sda.MidProject.service.implementations.ReservationServiceImpl;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @RestController
 public class ReservationController {
 
@@ -29,6 +33,4 @@ public class ReservationController {
         User registerUser =  reservation.getRegisterUser();
         return reservationServiceImpl.addReservation(reservation, movie, registerUser);
     }
-
-    //Delete reservation
 }

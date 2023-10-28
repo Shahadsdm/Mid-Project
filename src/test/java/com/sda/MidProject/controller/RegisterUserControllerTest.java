@@ -59,6 +59,47 @@ class RegisterUserControllerTest {
     }
 
     @Test
+    void RegisterUsersTest() throws Exception {
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/RegisterUsers"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andReturn();
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("RegisterUser"));
+    }
+
+    @Test
+    public void FindByRegisterUserIdTest() throws Exception {
+        RegisterUser registerUser = registerUserRepository.findById(90).get();
+        when(registerUserServiceImpl.findByRegisterUserId(90)).thenReturn(registerUser);
+
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/RegisterUser/90"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType("application/json"))
+                .andReturn();
+
+        String responseContent = result.getResponse().getContentAsString();
+
+        String expectedJson = "{\"userId\":90,\"name\":\"User90\",\"email\":\"user90@example.com\",\"role\":\"RegisterUser\",\"password\":\"1234\"}";
+
+        assertEquals(expectedJson, responseContent);
+    }
+
+    @Test
+    void AddRegisterUserTest() throws Exception {
+        RegisterUser registerUser = new RegisterUser(90,"User90","user90@example.com","1234");
+        String requestBody = objectMapper.writeValueAsString(registerUser);
+
+        MvcResult mvcResult =
+                mockMvc.perform(post("/addRegisterUser")
+                                .content(requestBody)
+                                .contentType(MediaType.APPLICATION_JSON)
+                        )
+                        .andExpect(status().isOk())
+                        .andReturn();
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("User90"));
+    }
+
+    @Test
     public void testUpdateRegisterUserSuccess() throws Exception {
         RegisterUser updatedRegisterUser = new RegisterUser(5, "UpdatedUser", "updateduser@example.com","1234");
 
@@ -73,6 +114,15 @@ class RegisterUserControllerTest {
 
         String responseContent = result.getResponse().getContentAsString();
         assertEquals("RegisterUser updated successfully", responseContent);
+    }
+
+    @Test
+    public void testDeleteRegisterUser() throws Exception {
+        when(registerUserServiceImpl.deleteRegisterUser(90)).thenReturn("RegisterUser deleted successfully");
+
+        mockMvc.perform(MockMvcRequestBuilders.delete("/deleteRegisterUser/90"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("RegisterUser deleted Successfully"));
     }
 
 
